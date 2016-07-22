@@ -10,6 +10,7 @@ class TopicsController < ApplicationController
   # GET /topics/1
   # GET /topics/1.json
   def show
+    @notes = Note.all
   end
 
   # GET /topics/new

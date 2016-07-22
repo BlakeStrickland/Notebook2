@@ -17,11 +17,11 @@ ActiveRecord::Schema.define(version: 20160722223331) do
     t.text     "note"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "topic_id"
   end
 
   create_table "topics", force: :cascade do |t|
     t.string   "subject"
-    t.text     "notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

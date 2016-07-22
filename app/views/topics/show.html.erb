@@ -1,9 +1,10 @@
 <p id="notice"><%= notice %></p>
+<%= @topic.subject %>
 
-<p>
-  <strong>Subject:</strong>
-  <%= @topic.subject %>
-</p>
+
+
+<%= render @notes %>
+
 
 
 <%= link_to 'Edit', edit_topic_path(@topic) %> |
