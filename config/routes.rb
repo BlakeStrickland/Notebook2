@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :keywords
   resources :notes
   root "topics#index"
   resources :topics

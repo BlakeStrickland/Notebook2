@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Keywords</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Word</th>
+      <th>Definition</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody id="keyword_tbody">
+     <%= render @keywords %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Keyword', new_keyword_path, remote: true %>
+
+<div id="new_keyword_form"></div>
