@@ -11,19 +11,6 @@ class QuestionsControllerTest < ActionController::TestCase
     assert_not_nil assigns(:questions)
   end
 
-  test "should get new" do
-    get :new
-    assert_response :success
-  end
-
-  test "should create question" do
-    assert_difference('Question.count') do
-      post :create, question: { answer: @question.answer, question: @question.question }
-    end
-
-    assert_redirected_to question_path(assigns(:question))
-  end
-
   test "should show question" do
     get :show, id: @question
     assert_response :success
