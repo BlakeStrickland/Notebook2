@@ -15,7 +15,6 @@ class NotesController < ApplicationController
   # GET /notes/new
   def new
     @note = Note.new
-    # @topic = Topic.find(params[:id])
   end
 
   # GET /notes/1/edit
@@ -26,7 +25,6 @@ class NotesController < ApplicationController
   # POST /notes.json
   def create
     @note = Note.new(note_params)
-
     @note.save
   end
 
