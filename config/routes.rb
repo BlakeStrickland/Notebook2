@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
+
+  root "dashboards#home"
+
+  get 'dashboards/home'
+
   resources :questions
   resources :keywords
   resources :notes
-  root "topics#index"
   resources :topics
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
