@@ -1,10 +1,12 @@
 <p id="notice"><%= notice %></p>
-<%= @topic.subject %>
+<p class="topicSubject"><%= @topic.subject %></p>
 
 
+<div class="eachNote">
+  <%= render @notes %>
+</div>
 
-<%= render @notes %>
-
+<p><%= link_to 'New Note', new_note_path %><p>
 
 
 <%= link_to 'Edit', edit_topic_path(@topic) %> |

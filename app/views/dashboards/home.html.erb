@@ -1,5 +1,16 @@
 <h1>Dashboard</h1>
 
-<div class="dash_notes"><%= render @notes %></div>
+<!-- <div class="dash_notes"><%= render @notes %></div>
 <div class="dash_keywords"><%= render @keywords %></div>
-<div class="dash_questions"><%= render @questions %></div>
+<div class="dash_questions"><%= render @questions %></div> -->
+
+<%= link_to 'New Topic', new_topic_path %>
+
+<%= link_to 'New Keyword', new_keyword_path, remote: true %>
+<%= link_to 'New Note', new_note_path, remote: true %>
+<%= link_to 'New Question', new_question_path, remote: true %>
+
+
+<div id="new_keyword_form"></div>
+<div id="new_note_form"></div>
+<div class="new_question_form"></div>
