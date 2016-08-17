@@ -24,6 +24,7 @@ class KeywordsController < ApplicationController
   # POST /keywords
   # POST /keywords.json
   def create
+    @topic = Topic.where(id: params[:id])
     @keyword = Keyword.new(keyword_params)
     @keyword.save
   end
@@ -60,6 +61,6 @@ class KeywordsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def keyword_params
-      params.require(:keyword).permit(:word, :definition)
+      params.require(:keyword).permit(:word, :definition, :topic_id)
     end
 end

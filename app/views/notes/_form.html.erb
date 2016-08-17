@@ -18,7 +18,7 @@
 
   <div class="field">
     <%= f.label :topic_id %>
-    <%= f.number_field :topic_id %>
+    <%= f.collection_select(:topic_id, Topic.order(:subject), :id, :subject, {:prompt => 'Select'}) %>
   </div>
 
   <div class="actions">

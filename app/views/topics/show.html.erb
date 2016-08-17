@@ -6,7 +6,25 @@
   <%= render @notes %>
 </div>
 
-<p><%= link_to 'New Note', new_note_path %><p>
+<div class="eachQuestion">
+  <%= render @questions %>
+</div>
+
+<div class="eachKeyword">
+  <%= render @keywords %>
+</div>
+
+<%= link_to 'New Keyword', new_keyword_path, remote: true %>
+<%= link_to 'New Note', new_note_path, remote: true %>
+<%= link_to 'New Question', new_question_path, remote: true %>
+
+
+<div id="new_keyword_form"></div>
+<div id="new_note_form"></div>
+<div class="new_question_form"></div>
+
+
+
 
 
 <%= link_to 'Edit', edit_topic_path(@topic) %> |

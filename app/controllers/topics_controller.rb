@@ -11,6 +11,8 @@ class TopicsController < ApplicationController
   # GET /topics/1.json
   def show
     @notes = Note.where(topic_id: params[:id])
+    @questions = Question.where(topic_id: params[:id])
+    @keywords = Keyword.where(topic_id: params[:id])
   end
 
   # GET /topics/new
