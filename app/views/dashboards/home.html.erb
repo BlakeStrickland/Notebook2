@@ -6,11 +6,6 @@
 
 <%= link_to 'New Topic', new_topic_path %>
 
-<%= link_to 'New Keyword', new_keyword_path, remote: true %>
-<%= link_to 'New Note', new_note_path, remote: true %>
-<%= link_to 'New Question', new_question_path, remote: true %>
-
-
-<div id="new_keyword_form"></div>
-<div id="new_note_form"></div>
-<div class="new_question_form"></div>
+<%= @topics.each do |topic| %>
+  <p> <%= link_to topic.subject, notes_path %> </p>
+<% end %>

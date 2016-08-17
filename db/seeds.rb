@@ -6,4 +6,6 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Topic.create(subject: "Psychology")
+Topic.create!(subject: "Psychology")
+
+Note.create!(note: "Test 1", topic_id: 1)
