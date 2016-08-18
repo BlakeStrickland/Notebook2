@@ -2,6 +2,6 @@
 
 <%= link_to 'New Topic', new_topic_path %>
 
-<%= @topics.each do |topic| %>
-  <p> <%= link_to topic.subject, notes_path %> </p>
+<% @topics.each do |topic| %>
+  <p> <%= link_to topic.subject, topic_path(topic) %> </p>
 <% end %>
