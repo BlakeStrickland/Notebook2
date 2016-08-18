@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
-<h2><p class="topicSubject"><%= @topic.subject %></p></h2>
-
+<h1><p class="topicSubject"><%= @topic.subject %></p></h1>
+<br />
+<br />
 
 <table>
   <thead>
@@ -14,7 +15,8 @@
     <%= render @notes %>
   </tbody>
 </table>
-
+<br />
+<br />
 <table>
   <thead>
     <tr>
@@ -28,7 +30,8 @@
     <%= render @questions %>
   </tbody>
 </table>
-
+<br />
+<br />
 
 <table>
   <thead>
@@ -43,16 +46,19 @@
      <%= render @keywords %>
   </tbody>
 </table>
-
-<%= link_to 'New Keyword', new_keyword_path, remote: true %>
-<%= link_to 'New Note', new_note_path, remote: true %>
+<br />
+<br />
+<div>
+<%= link_to 'New Keyword', new_keyword_path, remote: true %> |
+<%= link_to 'New Note', new_note_path, remote: true %> |
 <%= link_to 'New Question', new_question_path, remote: true %>
-
+</div>
 
 <div id="new_keyword_form"></div>
 <div id="new_note_form"></div>
 <div class="new_question_form"></div>
-
+<br />
+<br />
 
 
 
