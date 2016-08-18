@@ -1,4 +1,6 @@
 class DashboardsController < ApplicationController
+  before_filter :authorize
+
   def home
     @topics = Topic.all
     @notes = Note.all
