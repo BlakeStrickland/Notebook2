@@ -25,7 +25,6 @@ class KeywordsController < ApplicationController
   # POST /keywords
   # POST /keywords.json
   def create
-    @topic = Topic.where(id: params[:id])
     @keyword = Keyword.new(keyword_params)
     @keyword.save
   end
